@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldcup-aibettingtool"
+version = "0.1.0"
+description = "Sports analytics pipelines for live football stats, probabilities, odds value, and predictions."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "WorldCup AI Betting Tool" }]
+
+[project.scripts]
+worldcup-dashboard = "worldcup_aibettingtool.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
