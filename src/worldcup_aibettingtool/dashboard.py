@@ -195,7 +195,7 @@ def _players_table(players: list[dict[str, Any]]) -> str:
         f"""<tr><td>{escape(row["player"])}</td><td>{escape(row["team"])}</td><td>{row["shots_on_goal_avg"]:.2f}</td><td>{row["shots_attempted_avg"]:.2f}</td><td>{row["assists_avg"]:.2f}</td><td>{row["cards_avg"]:.2f}</td></tr>"""
         for row in players
     )
-    return f"""<div class="table-wrap"><table><thead><tr><th>Player</th><th>Team</th><th>SOG avg</th><th>Shots avg</th><th>Assists avg</th><th>Cards avg</th></tr></thead><tbody>{rows}</tbody></table></div>"""
+    return f"""<div class="table-wrap players-table"><table><thead><tr><th>Player</th><th>Team</th><th>SOG avg</th><th>Shots avg</th><th>Assists avg</th><th>Cards avg</th></tr></thead><tbody>{rows}</tbody></table></div>"""
 
 
 def _odds_table(values: list[dict[str, Any]]) -> str:
@@ -269,6 +269,8 @@ def _css() -> str:
     .pressure text { fill:var(--muted); font-size:15px; }
     .table-wrap { overflow:auto; }
     table { width:100%; border-collapse:collapse; min-width:780px; }
+    .players-table table { min-width:0; }
+    .players-table th, .players-table td { padding:.65rem .55rem; }
     th, td { text-align:left; padding:.8rem; border-bottom:1px solid rgba(255,255,255,.08); white-space:nowrap; }
     th { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }
     .callout { background:rgba(46,229,157,.08); border:1px solid rgba(46,229,157,.18); border-radius:16px; padding:1rem; }

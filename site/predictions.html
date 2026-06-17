@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Predictions | WorldCup AI Betting Tool</title>
+  <style>
+    :root { color-scheme: dark; --bg:#08111f; --panel:#101b2e; --panel2:#14243c; --text:#f5f7fb; --muted:#9fb1ca; --accent:#2ee59d; --away:#ff6b6b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at top left, #16365d, var(--bg) 36rem); color:var(--text); }
+    nav { position:sticky; top:0; z-index:2; display:flex; gap:1rem; padding:1rem clamp(1rem,4vw,3rem); background:rgba(8,17,31,.82); backdrop-filter: blur(12px); border-bottom:1px solid rgba(255,255,255,.08); }
+    nav a, .actions a { color:var(--text); text-decoration:none; border:1px solid rgba(255,255,255,.15); padding:.65rem .9rem; border-radius:999px; }
+    main { width:min(1180px, calc(100% - 2rem)); margin:0 auto; padding:2rem 0 4rem; }
+    .hero { display:grid; grid-template-columns: minmax(0, 1fr) 320px; gap:1.5rem; align-items:stretch; margin:1rem 0 1.5rem; }
+    h1 { font-size:clamp(2.5rem, 6vw, 5rem); line-height:.95; margin:.25rem 0 1rem; letter-spacing:-.06em; }
+    h2, h3, p { margin-top:0; }
+    .eyebrow, .card span { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; font-weight:800; }
+    .score-card, .card, .panel { background:linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.1); border-radius:24px; box-shadow:0 24px 80px rgba(0,0,0,.22); }
+    .score-card { padding:1.5rem; display:flex; flex-direction:column; justify-content:center; }
+    .score-card strong { font-size:3rem; line-height:1; }
+    .score-card small, .card p, .card small, .section-head p, .callout { color:var(--muted); }
+    .grid { display:grid; gap:1rem; margin:1rem 0; }
+    .two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .four { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    .card, .panel { padding:1.2rem; }
+    .metric strong { display:block; font-size:2.4rem; margin-top:.4rem; }
+    .pick strong { display:block; font-size:1.35rem; margin:.5rem 0; }
+    .stat-list { list-style:none; padding:0; margin:0; display:grid; gap:.5rem; }
+    .stat-list li { display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.08); padding-bottom:.45rem; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:1rem; }
+    .pressure { width:100%; height:auto; background:rgba(0,0,0,.16); border-radius:18px; }
+    .pressure line { stroke:rgba(255,255,255,.18); stroke-width:2; }
+    .pressure polyline { fill:none; stroke:var(--accent); stroke-width:5; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 0 10px rgba(46,229,157,.55)); }
+    .pressure text { fill:var(--muted); font-size:15px; }
+    .table-wrap { overflow:auto; }
+    table { width:100%; border-collapse:collapse; min-width:780px; }
+    .players-table table { min-width:0; }
+    .players-table th, .players-table td { padding:.65rem .55rem; }
+    th, td { text-align:left; padding:.8rem; border-bottom:1px solid rgba(255,255,255,.08); white-space:nowrap; }
+    th { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }
+    .callout { background:rgba(46,229,157,.08); border:1px solid rgba(46,229,157,.18); border-radius:16px; padding:1rem; }
+    .parlay { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:center; }
+    .parlay li { margin:.5rem 0; }
+    @media (max-width: 880px) { .hero, .two, .three, .four, .parlay { grid-template-columns:1fr; } .section-head { display:block; } }
+    </style>
+</head>
+<body>
+  <nav><a href="index.html">Live analytics</a><a href="predictions.html">Predictions</a></nav>
+  <main>
+        <section class="hero">
+          <div>
+            <p class="eyebrow">Predictions page</p>
+            <h1>Best bets from model edge and Bet365 prices</h1>
+            <p>Risk bands combine market type, odds range, model probability, and no-vig sportsbook probability.</p>
+          </div>
+          <div class="score-card">
+            <span>Total allocation</span>
+            <strong>36.57%</strong>
+            <small>Fractional Kelly capped per wager</small>
+          </div>
+        </section>
+        <section class="grid four">
+          <article class="card pick"><span>Low-risk value</span><strong>Over 1.5 @ 1.35</strong><p>Total Goals · 92.0% model · 24.2% ROI · 8.00% allocation</p><small>Model probability 92.0% vs no-vig market 38.2%; edge 53.8%.</small></article>
+          <article class="card pick"><span>Medium-risk value</span><strong>Over 2.5 @ 1.92</strong><p>Total Goals · 76.4% model · 46.6% ROI · 8.00% allocation</p><small>Model probability 76.4% vs no-vig market 26.9%; edge 49.5%.</small></article>
+          <article class="card pick"><span>High-risk value</span><strong>Away @ 2.95</strong><p>Fulltime Result · 43.8% model · 29.2% ROI · 5.25% allocation</p><small>Model probability 43.8% vs no-vig market 32.0%; edge 11.8%.</small></article>
+          <article class="card pick"><span>Best single pick</span><strong>Over 2.5 @ 1.92</strong><p>Total Goals · 76.4% model · 46.6% ROI · 8.00% allocation</p><small>Model probability 76.4% vs no-vig market 26.9%; edge 49.5%.</small></article>
+        </section>
+        <section class="panel parlay">
+          <div>
+            <p class="eyebrow">Best parlay</p>
+            <h2>3.14x combined odds</h2>
+            <p>Minimum 1.70x met: <strong>True</strong>; 2.00x target met: <strong>True</strong>.</p>
+          </div>
+          <ul>
+            <li>Total Goals: Over 1.5 @ 1.35</li><li>Double Chance: Home or Away @ 1.32</li><li>BTTS: Yes @ 1.76</li>
+          </ul>
+        </section>
+        <section class="grid three">
+          <article class="card metric"><span>HT home</span><strong>28.7%</strong></article>
+          <article class="card metric"><span>HT draw</span><strong>36.0%</strong></article>
+          <article class="card metric"><span>HT away</span><strong>35.3%</strong></article>
+        </section>
+        <section class="grid three">
+          <article class="card metric"><span>Home/draw</span><strong>56.2%</strong></article>
+          <article class="card metric"><span>Away/draw</span><strong>66.4%</strong></article>
+          <article class="card metric"><span>Home/away</span><strong>77.4%</strong></article>
+        </section>
+        <section class="panel">
+          <div class="section-head"><h2>Odds value calculator</h2><p>Sportsbook probability, no-vig market probability, model probability, ROI, edge, and allocation.</p></div>
+          <div class="table-wrap"><table><thead><tr><th>Market</th><th>Selection</th><th>Odds</th><th>Book prob</th><th>No-vig</th><th>Model</th><th>ROI</th><th>Edge</th><th>Allocation</th><th>Risk</th></tr></thead><tbody><tr><td>Total Goals</td><td>Over 2.5</td><td>1.92</td><td>52.1%</td><td>26.9%</td><td>76.4%</td><td>46.6%</td><td>49.5%</td><td>8.00%</td><td>Medium</td></tr><tr><td>BTTS</td><td>Yes</td><td>1.76</td><td>56.8%</td><td>53.4%</td><td>78.0%</td><td>37.3%</td><td>24.6%</td><td>8.00%</td><td>Medium</td></tr><tr><td>Fulltime Result</td><td>Away</td><td>2.95</td><td>33.9%</td><td>32.0%</td><td>43.8%</td><td>29.2%</td><td>11.8%</td><td>5.25%</td><td>High</td></tr><tr><td>Total Goals</td><td>Over 1.5</td><td>1.35</td><td>74.1%</td><td>38.2%</td><td>92.0%</td><td>24.2%</td><td>53.8%</td><td>8.00%</td><td>Low</td></tr><tr><td>Halftime Result</td><td>Away</td><td>3.35</td><td>29.8%</td><td>26.8%</td><td>35.3%</td><td>18.2%</td><td>8.5%</td><td>2.71%</td><td>High</td></tr><tr><td>Double Chance</td><td>Away or Draw</td><td>1.56</td><td>64.1%</td><td>30.5%</td><td>66.4%</td><td>3.6%</td><td>36.0%</td><td>2.28%</td><td>Low</td></tr><tr><td>Double Chance</td><td>Home or Away</td><td>1.32</td><td>75.8%</td><td>36.0%</td><td>77.4%</td><td>2.1%</td><td>41.3%</td><td>2.33%</td><td>Low</td></tr><tr><td>Halftime Result</td><td>Home</td><td>3.05</td><td>32.8%</td><td>29.4%</td><td>28.7%</td><td>-12.4%</td><td>-0.7%</td><td>0.00%</td><td>High</td></tr><tr><td>Fulltime Result</td><td>Home</td><td>2.42</td><td>41.3%</td><td>39.0%</td><td>33.6%</td><td>-18.8%</td><td>-5.4%</td><td>0.00%</td><td>High</td></tr><tr><td>Double Chance</td><td>Home or Draw</td><td>1.42</td><td>70.4%</td><td>33.5%</td><td>56.2%</td><td>-20.2%</td><td>22.7%</td><td>0.00%</td><td>Low</td></tr><tr><td>Halftime Result</td><td>Draw</td><td>2.05</td><td>48.8%</td><td>43.8%</td><td>36.0%</td><td>-26.2%</td><td>-7.8%</td><td>0.00%</td><td>High</td></tr><tr><td>Fulltime Result</td><td>Draw</td><td>3.25</td><td>30.8%</td><td>29.0%</td><td>22.6%</td><td>-26.5%</td><td>-6.4%</td><td>0.00%</td><td>High</td></tr><tr><td>Total Goals</td><td>Under 3.5</td><td>1.48</td><td>67.6%</td><td>34.9%</td><td>35.4%</td><td>-47.6%</td><td>0.5%</td><td>0.00%</td><td>Low</td></tr><tr><td>BTTS</td><td>No</td><td>2.02</td><td>49.5%</td><td>46.6%</td><td>22.0%</td><td>-55.6%</td><td>-24.6%</td><td>0.00%</td><td>Medium</td></tr></tbody></table></div>
+        </section>
+        </main>
+</body>
+</html>

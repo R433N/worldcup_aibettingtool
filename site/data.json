@@ -1,0 +1,540 @@
+{
+  "fixture": {
+    "home": {
+      "name": "Argentina",
+      "attack_rating": 1.12,
+      "defense_rating": 0.91
+    },
+    "away": {
+      "name": "France",
+      "attack_rating": 1.08,
+      "defense_rating": 0.95
+    },
+    "competition": "World Cup Final",
+    "kickoff_utc": "2026-07-19T20:00:00Z"
+  },
+  "live": {
+    "fixture": {
+      "home": "Argentina",
+      "away": "France",
+      "competition": "World Cup Final",
+      "kickoff_utc": "2026-07-19T20:00:00Z"
+    },
+    "teams": {
+      "Argentina": {
+        "goals": 1,
+        "shots_attempted": 4,
+        "shots_on_goal": 3,
+        "corners": 1,
+        "cards": 1,
+        "xg": 1.409
+      },
+      "France": {
+        "goals": 1,
+        "shots_attempted": 4,
+        "shots_on_goal": 3,
+        "corners": 2,
+        "cards": 1,
+        "xg": 1.668
+      }
+    },
+    "pressure_timeline": [
+      {
+        "minute": 5,
+        "home_pressure": 0.45,
+        "away_pressure": 0.0,
+        "momentum": 100.0
+      },
+      {
+        "minute": 10,
+        "home_pressure": 1.91,
+        "away_pressure": 0.0,
+        "momentum": 100.0
+      },
+      {
+        "minute": 15,
+        "home_pressure": 0.99,
+        "away_pressure": 0.65,
+        "momentum": 20.5
+      },
+      {
+        "minute": 20,
+        "home_pressure": 0.0,
+        "away_pressure": 1.14,
+        "momentum": -100.0
+      },
+      {
+        "minute": 25,
+        "home_pressure": 2.96,
+        "away_pressure": 0.45,
+        "momentum": 73.7
+      },
+      {
+        "minute": 30,
+        "home_pressure": 1.8,
+        "away_pressure": 0.0,
+        "momentum": 100.0
+      },
+      {
+        "minute": 35,
+        "home_pressure": 0.0,
+        "away_pressure": 1.34,
+        "momentum": -100.0
+      },
+      {
+        "minute": 40,
+        "home_pressure": 0.65,
+        "away_pressure": 0.81,
+        "momentum": -10.8
+      },
+      {
+        "minute": 45,
+        "home_pressure": 0.4,
+        "away_pressure": 0.0,
+        "momentum": 100.0
+      },
+      {
+        "minute": 50,
+        "home_pressure": 0.0,
+        "away_pressure": 0.0,
+        "momentum": 0.0
+      },
+      {
+        "minute": 55,
+        "home_pressure": 0.0,
+        "away_pressure": 0.37,
+        "momentum": -100.0
+      },
+      {
+        "minute": 60,
+        "home_pressure": 0.0,
+        "away_pressure": 1.71,
+        "momentum": -100.0
+      },
+      {
+        "minute": 65,
+        "home_pressure": 0.74,
+        "away_pressure": 0.9,
+        "momentum": -9.6
+      },
+      {
+        "minute": 70,
+        "home_pressure": 0.12,
+        "away_pressure": 0.0,
+        "momentum": 100.0
+      },
+      {
+        "minute": 75,
+        "home_pressure": 0.0,
+        "away_pressure": 0.65,
+        "momentum": -100.0
+      },
+      {
+        "minute": 80,
+        "home_pressure": 0.0,
+        "away_pressure": 4.02,
+        "momentum": -100.0
+      },
+      {
+        "minute": 85,
+        "home_pressure": 1.81,
+        "away_pressure": 2.2,
+        "momentum": -9.6
+      },
+      {
+        "minute": 90,
+        "home_pressure": 1.1,
+        "away_pressure": 0.0,
+        "momentum": 100.0
+      }
+    ]
+  },
+  "probability": {
+    "fulltime_home_win": 0.33557996794976885,
+    "fulltime_draw": 0.22630536068915225,
+    "fulltime_away_win": 0.43811467136107884,
+    "halftime_home_win": 0.2872137053268902,
+    "halftime_draw": 0.35998909101977594,
+    "halftime_away_win": 0.3527972036533339,
+    "double_chance_home_or_draw": 0.5618853286389212,
+    "double_chance_away_or_draw": 0.6644200320502311,
+    "double_chance_home_or_away": 0.7736946393108477,
+    "expected_home_goals": 1.56,
+    "expected_away_goals": 1.8,
+    "top_scorelines": [
+      [
+        "1-1",
+        0.0976
+      ],
+      [
+        "1-2",
+        0.0879
+      ],
+      [
+        "2-1",
+        0.0759
+      ],
+      [
+        "2-2",
+        0.0684
+      ],
+      [
+        "0-1",
+        0.0627
+      ]
+    ]
+  },
+  "team_stats": [
+    {
+      "team": "Argentina",
+      "matches": 8,
+      "recent_form": "WDDLW",
+      "goals_for_avg": 2.0,
+      "goals_against_avg": 1.38,
+      "over_25_goals_pct": 50.0,
+      "under_25_goals_pct": 50.0,
+      "cards_avg": 2.75,
+      "over_35_cards_pct": 100.0,
+      "corners_avg": 5.75,
+      "over_85_corners_pct": 100.0,
+      "btts_pct": 75.0,
+      "clean_sheet_pct": 25.0,
+      "conceded_pct": 75.0,
+      "half_with_most_goals": "Second half"
+    },
+    {
+      "team": "France",
+      "matches": 8,
+      "recent_form": "DWDWL",
+      "goals_for_avg": 2.12,
+      "goals_against_avg": 1.5,
+      "over_25_goals_pct": 87.5,
+      "under_25_goals_pct": 12.5,
+      "cards_avg": 2.38,
+      "over_35_cards_pct": 75.0,
+      "corners_avg": 6.12,
+      "over_85_corners_pct": 100.0,
+      "btts_pct": 75.0,
+      "clean_sheet_pct": 25.0,
+      "conceded_pct": 75.0,
+      "half_with_most_goals": "Second half"
+    }
+  ],
+  "head_to_head": {
+    "matches": 3,
+    "home_team_record": "1W-1D-1L",
+    "goals_avg": 5.33,
+    "cards_avg": 6.33,
+    "corners_avg": 10.67,
+    "btts_pct": 100.0
+  },
+  "players": [
+    {
+      "player": "Lionel Messi",
+      "team": "Argentina",
+      "shots_on_goal_avg": 1.75,
+      "shots_attempted_avg": 3.5,
+      "assists_avg": 0.62,
+      "cards_avg": 0.12
+    },
+    {
+      "player": "Julian Alvarez",
+      "team": "Argentina",
+      "shots_on_goal_avg": 1.12,
+      "shots_attempted_avg": 2.75,
+      "assists_avg": 0.25,
+      "cards_avg": 0.0
+    },
+    {
+      "player": "Angel Di Maria",
+      "team": "Argentina",
+      "shots_on_goal_avg": 1.0,
+      "shots_attempted_avg": 2.5,
+      "assists_avg": 0.67,
+      "cards_avg": 0.17
+    },
+    {
+      "player": "Kylian Mbappe",
+      "team": "France",
+      "shots_on_goal_avg": 2.0,
+      "shots_attempted_avg": 3.88,
+      "assists_avg": 0.38,
+      "cards_avg": 0.0
+    },
+    {
+      "player": "Antoine Griezmann",
+      "team": "France",
+      "shots_on_goal_avg": 0.88,
+      "shots_attempted_avg": 2.38,
+      "assists_avg": 0.75,
+      "cards_avg": 0.25
+    },
+    {
+      "player": "Ousmane Dembele",
+      "team": "France",
+      "shots_on_goal_avg": 0.71,
+      "shots_attempted_avg": 2.0,
+      "assists_avg": 0.43,
+      "cards_avg": 0.14
+    }
+  ],
+  "odds_values": [
+    {
+      "market": "Total Goals",
+      "selection": "Over 2.5",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.92,
+      "sportsbook_probability": 0.5208,
+      "no_vig_probability": 0.2689,
+      "model_probability": 0.7636,
+      "expected_roi": 0.4662,
+      "edge": 0.4948,
+      "allocation_pct": 8.0,
+      "risk": "Medium"
+    },
+    {
+      "market": "BTTS",
+      "selection": "Yes",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.76,
+      "sportsbook_probability": 0.5682,
+      "no_vig_probability": 0.5344,
+      "model_probability": 0.78,
+      "expected_roi": 0.3728,
+      "edge": 0.2456,
+      "allocation_pct": 8.0,
+      "risk": "Medium"
+    },
+    {
+      "market": "Fulltime Result",
+      "selection": "Away",
+      "sportsbook": "Bet365",
+      "decimal_odds": 2.95,
+      "sportsbook_probability": 0.339,
+      "no_vig_probability": 0.3198,
+      "model_probability": 0.4381,
+      "expected_roi": 0.2924,
+      "edge": 0.1183,
+      "allocation_pct": 5.25,
+      "risk": "High"
+    },
+    {
+      "market": "Total Goals",
+      "selection": "Over 1.5",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.35,
+      "sportsbook_probability": 0.7407,
+      "no_vig_probability": 0.3824,
+      "model_probability": 0.92,
+      "expected_roi": 0.242,
+      "edge": 0.5376,
+      "allocation_pct": 8.0,
+      "risk": "Low"
+    },
+    {
+      "market": "Halftime Result",
+      "selection": "Away",
+      "sportsbook": "Bet365",
+      "decimal_odds": 3.35,
+      "sportsbook_probability": 0.2985,
+      "no_vig_probability": 0.2679,
+      "model_probability": 0.3528,
+      "expected_roi": 0.1819,
+      "edge": 0.0849,
+      "allocation_pct": 2.71,
+      "risk": "High"
+    },
+    {
+      "market": "Double Chance",
+      "selection": "Away or Draw",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.56,
+      "sportsbook_probability": 0.641,
+      "no_vig_probability": 0.3048,
+      "model_probability": 0.6644,
+      "expected_roi": 0.0365,
+      "edge": 0.3596,
+      "allocation_pct": 2.28,
+      "risk": "Low"
+    },
+    {
+      "market": "Double Chance",
+      "selection": "Home or Away",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.32,
+      "sportsbook_probability": 0.7576,
+      "no_vig_probability": 0.3603,
+      "model_probability": 0.7737,
+      "expected_roi": 0.0213,
+      "edge": 0.4134,
+      "allocation_pct": 2.33,
+      "risk": "Low"
+    },
+    {
+      "market": "Halftime Result",
+      "selection": "Home",
+      "sportsbook": "Bet365",
+      "decimal_odds": 3.05,
+      "sportsbook_probability": 0.3279,
+      "no_vig_probability": 0.2943,
+      "model_probability": 0.2872,
+      "expected_roi": -0.124,
+      "edge": -0.0071,
+      "allocation_pct": 0.0,
+      "risk": "High"
+    },
+    {
+      "market": "Fulltime Result",
+      "selection": "Home",
+      "sportsbook": "Bet365",
+      "decimal_odds": 2.42,
+      "sportsbook_probability": 0.4132,
+      "no_vig_probability": 0.3899,
+      "model_probability": 0.3356,
+      "expected_roi": -0.1879,
+      "edge": -0.0543,
+      "allocation_pct": 0.0,
+      "risk": "High"
+    },
+    {
+      "market": "Double Chance",
+      "selection": "Home or Draw",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.42,
+      "sportsbook_probability": 0.7042,
+      "no_vig_probability": 0.3349,
+      "model_probability": 0.5619,
+      "expected_roi": -0.2021,
+      "edge": 0.227,
+      "allocation_pct": 0.0,
+      "risk": "Low"
+    },
+    {
+      "market": "Halftime Result",
+      "selection": "Draw",
+      "sportsbook": "Bet365",
+      "decimal_odds": 2.05,
+      "sportsbook_probability": 0.4878,
+      "no_vig_probability": 0.4378,
+      "model_probability": 0.36,
+      "expected_roi": -0.262,
+      "edge": -0.0778,
+      "allocation_pct": 0.0,
+      "risk": "High"
+    },
+    {
+      "market": "Fulltime Result",
+      "selection": "Draw",
+      "sportsbook": "Bet365",
+      "decimal_odds": 3.25,
+      "sportsbook_probability": 0.3077,
+      "no_vig_probability": 0.2903,
+      "model_probability": 0.2263,
+      "expected_roi": -0.2645,
+      "edge": -0.064,
+      "allocation_pct": 0.0,
+      "risk": "High"
+    },
+    {
+      "market": "Total Goals",
+      "selection": "Under 3.5",
+      "sportsbook": "Bet365",
+      "decimal_odds": 1.48,
+      "sportsbook_probability": 0.6757,
+      "no_vig_probability": 0.3488,
+      "model_probability": 0.3538,
+      "expected_roi": -0.4763,
+      "edge": 0.0051,
+      "allocation_pct": 0.0,
+      "risk": "Low"
+    },
+    {
+      "market": "BTTS",
+      "selection": "No",
+      "sportsbook": "Bet365",
+      "decimal_odds": 2.02,
+      "sportsbook_probability": 0.495,
+      "no_vig_probability": 0.4656,
+      "model_probability": 0.22,
+      "expected_roi": -0.5556,
+      "edge": -0.2456,
+      "allocation_pct": 0.0,
+      "risk": "Medium"
+    }
+  ],
+  "total_allocation_pct": 36.57,
+  "predictions": {
+    "low_risk": {
+      "risk": "Low",
+      "title": "Low-risk value",
+      "market": "Total Goals",
+      "selection": "Over 1.5",
+      "odds": 1.35,
+      "model_probability": 0.92,
+      "expected_roi": 0.242,
+      "allocation_pct": 8.0,
+      "rationale": "Model probability 92.0% vs no-vig market 38.2%; edge 53.8%."
+    },
+    "medium_risk": {
+      "risk": "Medium",
+      "title": "Medium-risk value",
+      "market": "Total Goals",
+      "selection": "Over 2.5",
+      "odds": 1.92,
+      "model_probability": 0.7636,
+      "expected_roi": 0.4662,
+      "allocation_pct": 8.0,
+      "rationale": "Model probability 76.4% vs no-vig market 26.9%; edge 49.5%."
+    },
+    "high_risk": {
+      "risk": "High",
+      "title": "High-risk value",
+      "market": "Fulltime Result",
+      "selection": "Away",
+      "odds": 2.95,
+      "model_probability": 0.4381,
+      "expected_roi": 0.2924,
+      "allocation_pct": 5.25,
+      "rationale": "Model probability 43.8% vs no-vig market 32.0%; edge 11.8%."
+    },
+    "best_pick": {
+      "risk": "Medium",
+      "title": "Best single pick",
+      "market": "Total Goals",
+      "selection": "Over 2.5",
+      "odds": 1.92,
+      "model_probability": 0.7636,
+      "expected_roi": 0.4662,
+      "allocation_pct": 8.0,
+      "rationale": "Model probability 76.4% vs no-vig market 26.9%; edge 49.5%."
+    },
+    "best_parlay": {
+      "title": "Best parlay",
+      "minimum_odds_met": true,
+      "target_odds_met": true,
+      "combined_odds": 3.14,
+      "model_probability": 0.5552,
+      "expected_roi": 0.7413,
+      "legs": [
+        {
+          "market": "Total Goals",
+          "selection": "Over 1.5",
+          "odds": 1.35,
+          "edge": 0.5376
+        },
+        {
+          "market": "Double Chance",
+          "selection": "Home or Away",
+          "odds": 1.32,
+          "edge": 0.4134
+        },
+        {
+          "market": "BTTS",
+          "selection": "Yes",
+          "odds": 1.76,
+          "edge": 0.2456
+        }
+      ]
+    }
+  }
+}
