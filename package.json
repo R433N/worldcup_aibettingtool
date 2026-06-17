@@ -1,0 +1,41 @@
+{
+  "name": "worldcup-aibettingtool",
+  "version": "1.0.0",
+  "description": "World Cup 2026 analytics, standings, bracket, and betting insight dashboard.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R433N/worldcup_aibettingtool.git"
+  },
+  "keywords": [
+    "world-cup",
+    "nextjs",
+    "sports-analytics",
+    "betting"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R433N/worldcup_aibettingtool/issues"
+  },
+  "homepage": "https://github.com/R433N/worldcup_aibettingtool#readme",
+  "dependencies": {
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.5.0",
+    "eslint-config-next": "^16.2.9",
+    "typescript": "^6.0.3"
+  }
+}
