@@ -149,41 +149,6 @@
       }
     ]
   },
-  "probability": {
-    "fulltime_home_win": 0.33557996794976885,
-    "fulltime_draw": 0.22630536068915225,
-    "fulltime_away_win": 0.43811467136107884,
-    "halftime_home_win": 0.2872137053268902,
-    "halftime_draw": 0.35998909101977594,
-    "halftime_away_win": 0.3527972036533339,
-    "double_chance_home_or_draw": 0.5618853286389212,
-    "double_chance_away_or_draw": 0.6644200320502311,
-    "double_chance_home_or_away": 0.7736946393108477,
-    "expected_home_goals": 1.56,
-    "expected_away_goals": 1.8,
-    "top_scorelines": [
-      [
-        "1-1",
-        0.0976
-      ],
-      [
-        "1-2",
-        0.0879
-      ],
-      [
-        "2-1",
-        0.0759
-      ],
-      [
-        "2-2",
-        0.0684
-      ],
-      [
-        "0-1",
-        0.0627
-      ]
-    ]
-  },
   "team_stats": [
     {
       "team": "Argentina",
@@ -278,263 +243,211 @@
       "cards_avg": 0.14
     }
   ],
-  "odds_values": [
-    {
-      "market": "Total Goals",
-      "selection": "Over 2.5",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.92,
-      "sportsbook_probability": 0.5208,
-      "no_vig_probability": 0.2689,
-      "model_probability": 0.7636,
-      "expected_roi": 0.4662,
-      "edge": 0.4948,
-      "allocation_pct": 8.0,
-      "risk": "Medium"
+  "data_foundation": {
+    "generated_at_utc": "2026-06-17T06:06:45Z",
+    "source_readiness": [
+      {
+        "area": "fixtures_results_tables",
+        "primary_source": "football-data.org",
+        "free_access": "Free tier with API token",
+        "reliability": "High",
+        "cadence": "Scheduled fixtures/results refresh every 6h; matchday refresh every 10m",
+        "fields": "fixtures, results, standings, goals_for, goals_against"
+      },
+      {
+        "area": "event_history_xg",
+        "primary_source": "StatsBomb Open Data",
+        "free_access": "Open GitHub data",
+        "reliability": "High",
+        "cadence": "Historical backfill; refresh weekly for new open releases",
+        "fields": "events, shots, shot_location, xg, lineups, player_events"
+      },
+      {
+        "area": "weather",
+        "primary_source": "Open-Meteo",
+        "free_access": "Free API, no key required for typical usage",
+        "reliability": "High",
+        "cadence": "Refresh 24h, 6h, 1h, and 15m before kickoff",
+        "fields": "temperature, wind_speed, precipitation, humidity"
+      },
+      {
+        "area": "sportsbook_odds",
+        "primary_source": "The Odds API",
+        "free_access": "Free tier with API key and request limits",
+        "reliability": "Medium",
+        "cadence": "Refresh pre-match every 15m; live every 60-120s when limits allow",
+        "fields": "moneyline, spreads, totals, bookmakers, opening_current_odds"
+      },
+      {
+        "area": "historical_odds_results",
+        "primary_source": "football-data.co.uk",
+        "free_access": "Free CSV downloads",
+        "reliability": "High",
+        "cadence": "Historical backfill; daily CSV sync",
+        "fields": "closing_odds, results, totals, asian_handicap"
+      },
+      {
+        "area": "historical_world_cup",
+        "primary_source": "Kaggle FIFA World Cup datasets",
+        "free_access": "Free account/API token",
+        "reliability": "Medium",
+        "cadence": "Manual or daily backfill; verify dataset provenance",
+        "fields": "historical_performance, squads, venues, tournament_results"
+      },
+      {
+        "area": "stadium_location",
+        "primary_source": "OpenStreetMap / Nominatim",
+        "free_access": "Free with usage policy",
+        "reliability": "Medium",
+        "cadence": "Venue backfill and monthly refresh",
+        "fields": "stadium_coordinates, altitude_proxy, location, timezone"
+      },
+      {
+        "area": "injuries_suspensions_lineups",
+        "primary_source": "Public federation/team reports",
+        "free_access": "Public web pages/RSS where available",
+        "reliability": "Medium",
+        "cadence": "Refresh every 30m on matchday; manually verify critical changes",
+        "fields": "injuries, suspensions, starting_lineups, bench"
+      }
+    ],
+    "warehouse_counts": {
+      "sources": 8,
+      "raw_payloads": 1,
+      "teams": 2,
+      "venues": 1,
+      "matches": 7,
+      "team_match_stats": 6,
+      "player_match_stats": 2,
+      "availability": 2,
+      "lineups": 22,
+      "referee_stats": 1,
+      "weather_snapshots": 1,
+      "odds_snapshots": 8,
+      "feature_snapshots": 1
     },
-    {
-      "market": "BTTS",
-      "selection": "Yes",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.76,
-      "sportsbook_probability": 0.5682,
-      "no_vig_probability": 0.5344,
-      "model_probability": 0.78,
-      "expected_roi": 0.3728,
-      "edge": 0.2456,
-      "allocation_pct": 8.0,
-      "risk": "Medium"
+    "odds_movements": [
+      {
+        "match_id": "fifa-2026-arg-fra-001",
+        "sportsbook": "The Odds API Demo",
+        "market": "Moneyline",
+        "selection": "Away",
+        "opening_odds": 2.92,
+        "current_odds": 3.05,
+        "implied_probability_open": 0.3425,
+        "implied_probability_current": 0.3279,
+        "odds_delta": 0.13,
+        "implied_probability_delta": -0.0146
+      },
+      {
+        "match_id": "fifa-2026-arg-fra-001",
+        "sportsbook": "The Odds API Demo",
+        "market": "Moneyline",
+        "selection": "Draw",
+        "opening_odds": 3.25,
+        "current_odds": 3.3,
+        "implied_probability_open": 0.3077,
+        "implied_probability_current": 0.303,
+        "odds_delta": 0.05,
+        "implied_probability_delta": -0.0047
+      },
+      {
+        "match_id": "fifa-2026-arg-fra-001",
+        "sportsbook": "The Odds API Demo",
+        "market": "Moneyline",
+        "selection": "Home",
+        "opening_odds": 2.45,
+        "current_odds": 2.35,
+        "implied_probability_open": 0.4082,
+        "implied_probability_current": 0.4255,
+        "odds_delta": -0.1,
+        "implied_probability_delta": 0.0174
+      },
+      {
+        "match_id": "fifa-2026-arg-fra-001",
+        "sportsbook": "The Odds API Demo",
+        "market": "Totals",
+        "selection": "Over 2.5",
+        "opening_odds": 1.98,
+        "current_odds": 1.91,
+        "implied_probability_open": 0.5051,
+        "implied_probability_current": 0.5236,
+        "odds_delta": -0.07,
+        "implied_probability_delta": 0.0185
+      }
+    ],
+    "feature_snapshot": {
+      "match_id": "fifa-2026-arg-fra-001",
+      "home_team": "Argentina",
+      "away_team": "France",
+      "kickoff_utc": "2026-07-19T20:00:00Z",
+      "generated_at_utc": "2026-07-19T18:00:00Z",
+      "features": {
+        "home_team": "Argentina",
+        "away_team": "France",
+        "home_form_points_last_5": 7,
+        "away_form_points_last_5": 7,
+        "home_goals_for_avg": 2.0,
+        "away_goals_for_avg": 1.67,
+        "home_goals_against_avg": 0.67,
+        "away_goals_against_avg": 0.33,
+        "home_xg_avg": 1.8,
+        "away_xg_avg": 1.57,
+        "home_shots_avg": 14.0,
+        "away_shots_avg": 12.67,
+        "home_shots_on_target_avg": 6.0,
+        "away_shots_on_target_avg": 5.0,
+        "home_possession_avg": 57.67,
+        "away_possession_avg": 53.0,
+        "home_unavailable_players": 1,
+        "away_unavailable_players": 1,
+        "home_confirmed_starters": 11,
+        "away_confirmed_starters": 11,
+        "referee_yellow_cards_avg": 4.6,
+        "referee_red_cards_avg": 0.18,
+        "referee_penalties_avg": 0.28,
+        "temperature_c": 25.4,
+        "wind_speed_kmh": 12.2,
+        "precipitation_mm": 0.4,
+        "venue_altitude_m": 2.0,
+        "venue_capacity": 82500,
+        "odds_move_the_odds_api_demo_moneyline_away_current": 3.05,
+        "odds_move_the_odds_api_demo_moneyline_away_implied_delta": -0.0146,
+        "odds_move_the_odds_api_demo_moneyline_draw_current": 3.3,
+        "odds_move_the_odds_api_demo_moneyline_draw_implied_delta": -0.0047,
+        "odds_move_the_odds_api_demo_moneyline_home_current": 2.35,
+        "odds_move_the_odds_api_demo_moneyline_home_implied_delta": 0.0174,
+        "odds_move_the_odds_api_demo_totals_over_2.5_current": 1.91,
+        "odds_move_the_odds_api_demo_totals_over_2.5_implied_delta": 0.0185
+      }
     },
-    {
-      "market": "Fulltime Result",
-      "selection": "Away",
-      "sportsbook": "Bet365",
-      "decimal_odds": 2.95,
-      "sportsbook_probability": 0.339,
-      "no_vig_probability": 0.3198,
-      "model_probability": 0.4381,
-      "expected_roi": 0.2924,
-      "edge": 0.1183,
-      "allocation_pct": 5.25,
-      "risk": "High"
-    },
-    {
-      "market": "Total Goals",
-      "selection": "Over 1.5",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.35,
-      "sportsbook_probability": 0.7407,
-      "no_vig_probability": 0.3824,
-      "model_probability": 0.92,
-      "expected_roi": 0.242,
-      "edge": 0.5376,
-      "allocation_pct": 8.0,
-      "risk": "Low"
-    },
-    {
-      "market": "Halftime Result",
-      "selection": "Away",
-      "sportsbook": "Bet365",
-      "decimal_odds": 3.35,
-      "sportsbook_probability": 0.2985,
-      "no_vig_probability": 0.2679,
-      "model_probability": 0.3528,
-      "expected_roi": 0.1819,
-      "edge": 0.0849,
-      "allocation_pct": 2.71,
-      "risk": "High"
-    },
-    {
-      "market": "Double Chance",
-      "selection": "Away or Draw",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.56,
-      "sportsbook_probability": 0.641,
-      "no_vig_probability": 0.3048,
-      "model_probability": 0.6644,
-      "expected_roi": 0.0365,
-      "edge": 0.3596,
-      "allocation_pct": 2.28,
-      "risk": "Low"
-    },
-    {
-      "market": "Double Chance",
-      "selection": "Home or Away",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.32,
-      "sportsbook_probability": 0.7576,
-      "no_vig_probability": 0.3603,
-      "model_probability": 0.7737,
-      "expected_roi": 0.0213,
-      "edge": 0.4134,
-      "allocation_pct": 2.33,
-      "risk": "Low"
-    },
-    {
-      "market": "Halftime Result",
-      "selection": "Home",
-      "sportsbook": "Bet365",
-      "decimal_odds": 3.05,
-      "sportsbook_probability": 0.3279,
-      "no_vig_probability": 0.2943,
-      "model_probability": 0.2872,
-      "expected_roi": -0.124,
-      "edge": -0.0071,
-      "allocation_pct": 0.0,
-      "risk": "High"
-    },
-    {
-      "market": "Fulltime Result",
-      "selection": "Home",
-      "sportsbook": "Bet365",
-      "decimal_odds": 2.42,
-      "sportsbook_probability": 0.4132,
-      "no_vig_probability": 0.3899,
-      "model_probability": 0.3356,
-      "expected_roi": -0.1879,
-      "edge": -0.0543,
-      "allocation_pct": 0.0,
-      "risk": "High"
-    },
-    {
-      "market": "Double Chance",
-      "selection": "Home or Draw",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.42,
-      "sportsbook_probability": 0.7042,
-      "no_vig_probability": 0.3349,
-      "model_probability": 0.5619,
-      "expected_roi": -0.2021,
-      "edge": 0.227,
-      "allocation_pct": 0.0,
-      "risk": "Low"
-    },
-    {
-      "market": "Halftime Result",
-      "selection": "Draw",
-      "sportsbook": "Bet365",
-      "decimal_odds": 2.05,
-      "sportsbook_probability": 0.4878,
-      "no_vig_probability": 0.4378,
-      "model_probability": 0.36,
-      "expected_roi": -0.262,
-      "edge": -0.0778,
-      "allocation_pct": 0.0,
-      "risk": "High"
-    },
-    {
-      "market": "Fulltime Result",
-      "selection": "Draw",
-      "sportsbook": "Bet365",
-      "decimal_odds": 3.25,
-      "sportsbook_probability": 0.3077,
-      "no_vig_probability": 0.2903,
-      "model_probability": 0.2263,
-      "expected_roi": -0.2645,
-      "edge": -0.064,
-      "allocation_pct": 0.0,
-      "risk": "High"
-    },
-    {
-      "market": "Total Goals",
-      "selection": "Under 3.5",
-      "sportsbook": "Bet365",
-      "decimal_odds": 1.48,
-      "sportsbook_probability": 0.6757,
-      "no_vig_probability": 0.3488,
-      "model_probability": 0.3538,
-      "expected_roi": -0.4763,
-      "edge": 0.0051,
-      "allocation_pct": 0.0,
-      "risk": "Low"
-    },
-    {
-      "market": "BTTS",
-      "selection": "No",
-      "sportsbook": "Bet365",
-      "decimal_odds": 2.02,
-      "sportsbook_probability": 0.495,
-      "no_vig_probability": 0.4656,
-      "model_probability": 0.22,
-      "expected_roi": -0.5556,
-      "edge": -0.2456,
-      "allocation_pct": 0.0,
-      "risk": "Medium"
-    }
-  ],
-  "total_allocation_pct": 36.57,
-  "predictions": {
-    "low_risk": {
-      "risk": "Low",
-      "title": "Low-risk value",
-      "market": "Total Goals",
-      "selection": "Over 1.5",
-      "odds": 1.35,
-      "model_probability": 0.92,
-      "expected_roi": 0.242,
-      "allocation_pct": 8.0,
-      "rationale": "Model probability 92.0% vs no-vig market 38.2%; edge 53.8%."
-    },
-    "medium_risk": {
-      "risk": "Medium",
-      "title": "Medium-risk value",
-      "market": "Total Goals",
-      "selection": "Over 2.5",
-      "odds": 1.92,
-      "model_probability": 0.7636,
-      "expected_roi": 0.4662,
-      "allocation_pct": 8.0,
-      "rationale": "Model probability 76.4% vs no-vig market 26.9%; edge 49.5%."
-    },
-    "high_risk": {
-      "risk": "High",
-      "title": "High-risk value",
-      "market": "Fulltime Result",
-      "selection": "Away",
-      "odds": 2.95,
-      "model_probability": 0.4381,
-      "expected_roi": 0.2924,
-      "allocation_pct": 5.25,
-      "rationale": "Model probability 43.8% vs no-vig market 32.0%; edge 11.8%."
-    },
-    "best_pick": {
-      "risk": "Medium",
-      "title": "Best single pick",
-      "market": "Total Goals",
-      "selection": "Over 2.5",
-      "odds": 1.92,
-      "model_probability": 0.7636,
-      "expected_roi": 0.4662,
-      "allocation_pct": 8.0,
-      "rationale": "Model probability 76.4% vs no-vig market 26.9%; edge 49.5%."
-    },
-    "best_parlay": {
-      "title": "Best parlay",
-      "minimum_odds_met": true,
-      "target_odds_met": true,
-      "combined_odds": 3.14,
-      "model_probability": 0.5552,
-      "expected_roi": 0.7413,
-      "legs": [
-        {
-          "market": "Total Goals",
-          "selection": "Over 1.5",
-          "odds": 1.35,
-          "edge": 0.5376
-        },
-        {
-          "market": "Double Chance",
-          "selection": "Home or Away",
-          "odds": 1.32,
-          "edge": 0.4134
-        },
-        {
-          "market": "BTTS",
-          "selection": "Yes",
-          "odds": 1.76,
-          "edge": 0.2456
-        }
-      ]
-    }
+    "update_plan": [
+      {
+        "job": "historical_backfill",
+        "cadence": "daily",
+        "purpose": "World Cup results, event data, xG, historical odds"
+      },
+      {
+        "job": "fixture_refresh",
+        "cadence": "every 6h",
+        "purpose": "FIFA 2026 schedule, venues, referees"
+      },
+      {
+        "job": "prematch_refresh",
+        "cadence": "24h/6h/1h/15m before kickoff",
+        "purpose": "lineups, injuries, weather, odds"
+      },
+      {
+        "job": "live_match_refresh",
+        "cadence": "60-120s during match when provider limits allow",
+        "purpose": "odds, incidents, shots, cards, corners"
+      },
+      {
+        "job": "postmatch_close",
+        "cadence": "after final whistle",
+        "purpose": "freeze results and reconcile raw vs normalized data"
+      }
+    ],
+    "no_prediction_policy": "This layer collects, cleans, stores, and prepares data only. It does not recommend bets or generate model predictions."
   }
 }

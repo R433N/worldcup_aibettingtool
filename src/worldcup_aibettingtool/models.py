@@ -164,6 +164,62 @@ class BetMarket:
 
 
 @dataclass(frozen=True)
+class DataSourceDescriptor:
+    name: str
+    category: str
+    url: str
+    free_access: str
+    reliability: str
+    update_cadence: str
+    betting_fields: tuple[str, ...]
+    notes: str
+
+
+@dataclass(frozen=True)
+class OddsSnapshot:
+    match_id: str
+    sportsbook: str
+    market: str
+    selection: str
+    decimal_odds: float
+    captured_at_utc: str
+    is_opening: bool = False
+
+
+@dataclass(frozen=True)
+class OddsMovement:
+    match_id: str
+    sportsbook: str
+    market: str
+    selection: str
+    opening_odds: float
+    current_odds: float
+    implied_probability_open: float
+    implied_probability_current: float
+    odds_delta: float
+    implied_probability_delta: float
+
+
+@dataclass(frozen=True)
+class DataReadinessItem:
+    area: str
+    status: str
+    source: str
+    update_cadence: str
+    fields: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class MatchFeatureSnapshot:
+    match_id: str
+    home_team: str
+    away_team: str
+    kickoff_utc: str
+    generated_at_utc: str
+    features: dict[str, float | int | str | None]
+
+
+@dataclass(frozen=True)
 class OddsValue:
     market: str
     selection: str
