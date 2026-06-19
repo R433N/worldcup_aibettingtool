@@ -1,8 +1,10 @@
 # WorldCup AI Betting Tool
 
-Data foundation for a FIFA 2026 World Cup betting analytics assistant.
+Data foundation and analytics dashboard for FIFA 2026 World Cup betting analytics.
 
-This project collects, cleans, stores, and prepares football data for a downstream AI model. It does **not** make betting predictions, recommend wagers, or calculate “best bets.”
+The Python backend collects, cleans, stores, and prepares football data for a downstream AI model. It does **not** make betting predictions, recommend wagers, or calculate "best bets."
+
+The Next.js frontend provides a dashboard for groups, standings, knockout-stage paths, match dashboards, charts, and bet recommendation screens.
 
 ## Technical decisions
 
@@ -37,7 +39,9 @@ The schema covers:
 - Opening/current odds snapshots and implied-probability movement.
 - Model-ready feature snapshots.
 
-## Run locally
+## Python backend
+
+### Run locally
 
 ```bash
 PYTHONPATH=src python3 -m worldcup_aibettingtool.cli build-dashboard --output site
@@ -46,7 +50,7 @@ python3 -m http.server 8000 --directory site
 
 Open `http://localhost:8000`.
 
-## Generate data artifacts only
+### Generate data artifacts only
 
 ```bash
 PYTHONPATH=src python3 -m worldcup_aibettingtool.cli build-data-foundation --output site
@@ -54,8 +58,17 @@ PYTHONPATH=src python3 -m worldcup_aibettingtool.cli build-data-foundation --out
 
 This writes `site/data_foundation.json`.
 
-## Tests
+### Tests
 
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests
+```
+
+## Next.js frontend
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run typecheck
 ```
