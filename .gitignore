@@ -1,8 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+*.egg-info/
+
+# Node / Next.js
 .next/
 node_modules/
 out/
-dist/
-build/
 coverage/
 *.tsbuildinfo
 .env*
@@ -11,4 +19,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# OS
 .DS_Store

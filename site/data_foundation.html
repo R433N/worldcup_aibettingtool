@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data foundation | WorldCup AI Betting Tool</title>
+  <style>
+    :root { color-scheme: dark; --bg:#08111f; --panel:#101b2e; --text:#f5f7fb; --muted:#9fb1ca; --accent:#2ee59d; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at top left, #16365d, var(--bg) 36rem); color:var(--text); }
+    nav { position:sticky; top:0; z-index:2; display:flex; gap:1rem; padding:1rem clamp(1rem,4vw,3rem); background:rgba(8,17,31,.82); backdrop-filter: blur(12px); border-bottom:1px solid rgba(255,255,255,.08); }
+    nav a, .actions a { color:var(--text); text-decoration:none; border:1px solid rgba(255,255,255,.15); padding:.65rem .9rem; border-radius:999px; }
+    main { width:min(1180px, calc(100% - 2rem)); margin:0 auto; padding:2rem 0 4rem; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:1.5rem; align-items:stretch; margin:1rem 0 1.5rem; }
+    h1 { font-size:clamp(2.4rem,6vw,5rem); line-height:.95; margin:.25rem 0 1rem; letter-spacing:-.06em; }
+    h2, h3, p { margin-top:0; }
+    .eyebrow, .card span { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; font-weight:800; }
+    .score-card, .card, .panel { background:linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.1); border-radius:24px; box-shadow:0 24px 80px rgba(0,0,0,.22); }
+    .score-card { padding:1.5rem; display:flex; flex-direction:column; justify-content:center; }
+    .score-card strong { font-size:2.35rem; line-height:1; }
+    .score-card small, .section-head p, .callout, .job-list small { color:var(--muted); }
+    .grid { display:grid; gap:1rem; margin:1rem 0; }
+    .two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .card, .panel { padding:1.2rem; }
+    .stat-list, .job-list { list-style:none; padding:0; margin:0; display:grid; gap:.6rem; }
+    .stat-list li { display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.08); padding-bottom:.45rem; }
+    .job-list li { display:grid; gap:.2rem; border-bottom:1px solid rgba(255,255,255,.08); padding-bottom:.65rem; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:1rem; }
+    .pressure { width:100%; height:auto; background:rgba(0,0,0,.16); border-radius:18px; }
+    .pressure line { stroke:rgba(255,255,255,.18); stroke-width:2; }
+    .pressure polyline { fill:none; stroke:var(--accent); stroke-width:5; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 0 10px rgba(46,229,157,.55)); }
+    .pressure text { fill:var(--muted); font-size:15px; }
+    .table-wrap { overflow:auto; }
+    table { width:100%; border-collapse:collapse; min-width:780px; }
+    .players-table table { min-width:0; }
+    .players-table th, .players-table td { padding:.65rem .55rem; }
+    .feature-table table { min-width:0; }
+    th, td { text-align:left; padding:.8rem; border-bottom:1px solid rgba(255,255,255,.08); white-space:nowrap; }
+    th { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }
+    .callout { background:rgba(46,229,157,.08); border:1px solid rgba(46,229,157,.18); border-radius:16px; padding:1rem; }
+    @media (max-width: 880px) { .hero, .two { grid-template-columns:1fr; } .section-head { display:block; } }
+    </style>
+</head>
+<body>
+  <nav><a href="index.html">Live inputs</a><a href="data_foundation.html">Data foundation</a></nav>
+  <main>
+        <section class="hero">
+          <div>
+            <p class="eyebrow">No-prediction data pipeline</p>
+            <h1>Model-ready World Cup data</h1>
+            <p>This layer collects, cleans, stores, and prepares data only. It does not recommend bets or generate model predictions.</p>
+          </div>
+          <div class="score-card">
+            <span>Feature target</span>
+            <strong>fifa-2026-arg-fra-001</strong>
+            <small>Argentina vs France</small>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="section-head"><h2>Reliable free source catalog</h2><p>Primary feeds, access model, reliability, cadence, and betting-useful fields.</p></div>
+          <div class="table-wrap"><table><thead><tr><th>Source</th><th>Area</th><th>Access</th><th>Reliability</th><th>Cadence</th><th>Fields</th></tr></thead><tbody><tr><td>football-data.org</td><td>fixtures_results_tables</td><td>Free tier with API token</td><td>High</td><td>Scheduled fixtures/results refresh every 6h; matchday refresh every 10m</td><td>fixtures, results, standings, goals_for, goals_against</td></tr><tr><td>StatsBomb Open Data</td><td>event_history_xg</td><td>Open GitHub data</td><td>High</td><td>Historical backfill; refresh weekly for new open releases</td><td>events, shots, shot_location, xg, lineups, player_events</td></tr><tr><td>Open-Meteo</td><td>weather</td><td>Free API, no key required for typical usage</td><td>High</td><td>Refresh 24h, 6h, 1h, and 15m before kickoff</td><td>temperature, wind_speed, precipitation, humidity</td></tr><tr><td>The Odds API</td><td>sportsbook_odds</td><td>Free tier with API key and request limits</td><td>Medium</td><td>Refresh pre-match every 15m; live every 60-120s when limits allow</td><td>moneyline, spreads, totals, bookmakers, opening_current_odds</td></tr><tr><td>football-data.co.uk</td><td>historical_odds_results</td><td>Free CSV downloads</td><td>High</td><td>Historical backfill; daily CSV sync</td><td>closing_odds, results, totals, asian_handicap</td></tr><tr><td>Kaggle FIFA World Cup datasets</td><td>historical_world_cup</td><td>Free account/API token</td><td>Medium</td><td>Manual or daily backfill; verify dataset provenance</td><td>historical_performance, squads, venues, tournament_results</td></tr><tr><td>OpenStreetMap / Nominatim</td><td>stadium_location</td><td>Free with usage policy</td><td>Medium</td><td>Venue backfill and monthly refresh</td><td>stadium_coordinates, altitude_proxy, location, timezone</td></tr><tr><td>Public federation/team reports</td><td>injuries_suspensions_lineups</td><td>Public web pages/RSS where available</td><td>Medium</td><td>Refresh every 30m on matchday; manually verify critical changes</td><td>injuries, suspensions, starting_lineups, bench</td></tr></tbody></table></div>
+        </section>
+        <section class="grid two">
+          <article class="panel">
+            <h2>Warehouse coverage</h2>
+            <ul class="stat-list"><li><span>Sources</span><strong>8</strong></li><li><span>Raw Payloads</span><strong>1</strong></li><li><span>Teams</span><strong>2</strong></li><li><span>Venues</span><strong>1</strong></li><li><span>Matches</span><strong>7</strong></li><li><span>Team Match Stats</span><strong>6</strong></li><li><span>Player Match Stats</span><strong>2</strong></li><li><span>Availability</span><strong>2</strong></li><li><span>Lineups</span><strong>22</strong></li><li><span>Referee Stats</span><strong>1</strong></li><li><span>Weather Snapshots</span><strong>1</strong></li><li><span>Odds Snapshots</span><strong>8</strong></li><li><span>Feature Snapshots</span><strong>1</strong></li></ul>
+          </article>
+          <article class="panel">
+            <h2>Automatic update plan</h2>
+            <ul class="job-list"><li><strong>historical_backfill</strong><span>daily</span><small>World Cup results, event data, xG, historical odds</small></li><li><strong>fixture_refresh</strong><span>every 6h</span><small>FIFA 2026 schedule, venues, referees</small></li><li><strong>prematch_refresh</strong><span>24h/6h/1h/15m before kickoff</span><small>lineups, injuries, weather, odds</small></li><li><strong>live_match_refresh</strong><span>60-120s during match when provider limits allow</span><small>odds, incidents, shots, cards, corners</small></li><li><strong>postmatch_close</strong><span>after final whistle</span><small>freeze results and reconcile raw vs normalized data</small></li></ul>
+          </article>
+        </section>
+        <section class="panel">
+          <div class="section-head"><h2>Opening vs current odds movement</h2><p>Sportsbook-implied probability movement only; no AI value judgement is made.</p></div>
+          <div class="table-wrap"><table><thead><tr><th>Sportsbook</th><th>Market</th><th>Selection</th><th>Opening</th><th>Current</th><th>Open prob</th><th>Current prob</th><th>Move</th></tr></thead><tbody><tr><td>The Odds API Demo</td><td>Moneyline</td><td>Away</td><td>2.92</td><td>3.05</td><td>34.2%</td><td>32.8%</td><td>-1.5%</td></tr><tr><td>The Odds API Demo</td><td>Moneyline</td><td>Draw</td><td>3.25</td><td>3.30</td><td>30.8%</td><td>30.3%</td><td>-0.5%</td></tr><tr><td>The Odds API Demo</td><td>Moneyline</td><td>Home</td><td>2.45</td><td>2.35</td><td>40.8%</td><td>42.5%</td><td>+1.7%</td></tr><tr><td>The Odds API Demo</td><td>Totals</td><td>Over 2.5</td><td>1.98</td><td>1.91</td><td>50.5%</td><td>52.4%</td><td>+1.8%</td></tr></tbody></table></div>
+        </section>
+        <section class="panel">
+          <div class="section-head"><h2>Prepared feature snapshot</h2><p>Clean model inputs for moneyline, handicap, totals, BTTS, cards, and corners markets.</p></div>
+          <div class="table-wrap feature-table"><table><thead><tr><th>Feature</th><th>Value</th></tr></thead><tbody><tr><td>away_confirmed_starters</td><td>11</td></tr><tr><td>away_form_points_last_5</td><td>7</td></tr><tr><td>away_goals_against_avg</td><td>0.33</td></tr><tr><td>away_goals_for_avg</td><td>1.67</td></tr><tr><td>away_possession_avg</td><td>53.0</td></tr><tr><td>away_shots_avg</td><td>12.67</td></tr><tr><td>away_shots_on_target_avg</td><td>5.0</td></tr><tr><td>away_team</td><td>France</td></tr><tr><td>away_unavailable_players</td><td>1</td></tr><tr><td>away_xg_avg</td><td>1.57</td></tr><tr><td>home_confirmed_starters</td><td>11</td></tr><tr><td>home_form_points_last_5</td><td>7</td></tr><tr><td>home_goals_against_avg</td><td>0.67</td></tr><tr><td>home_goals_for_avg</td><td>2.0</td></tr><tr><td>home_possession_avg</td><td>57.67</td></tr><tr><td>home_shots_avg</td><td>14.0</td></tr><tr><td>home_shots_on_target_avg</td><td>6.0</td></tr><tr><td>home_team</td><td>Argentina</td></tr><tr><td>home_unavailable_players</td><td>1</td></tr><tr><td>home_xg_avg</td><td>1.8</td></tr><tr><td>odds_move_the_odds_api_demo_moneyline_away_current</td><td>3.05</td></tr><tr><td>odds_move_the_odds_api_demo_moneyline_away_implied_delta</td><td>-0.0146</td></tr><tr><td>odds_move_the_odds_api_demo_moneyline_draw_current</td><td>3.3</td></tr><tr><td>odds_move_the_odds_api_demo_moneyline_draw_implied_delta</td><td>-0.0047</td></tr><tr><td>odds_move_the_odds_api_demo_moneyline_home_current</td><td>2.35</td></tr><tr><td>odds_move_the_odds_api_demo_moneyline_home_implied_delta</td><td>0.0174</td></tr><tr><td>odds_move_the_odds_api_demo_totals_over_2.5_current</td><td>1.91</td></tr><tr><td>odds_move_the_odds_api_demo_totals_over_2.5_implied_delta</td><td>0.0185</td></tr><tr><td>precipitation_mm</td><td>0.4</td></tr><tr><td>referee_penalties_avg</td><td>0.28</td></tr><tr><td>referee_red_cards_avg</td><td>0.18</td></tr><tr><td>referee_yellow_cards_avg</td><td>4.6</td></tr><tr><td>temperature_c</td><td>25.4</td></tr><tr><td>venue_altitude_m</td><td>2.0</td></tr><tr><td>venue_capacity</td><td>82500</td></tr><tr><td>wind_speed_kmh</td><td>12.2</td></tr></tbody></table></div>
+        </section>
+        </main>
+</body>
+</html>
